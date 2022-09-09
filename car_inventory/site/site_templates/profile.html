@@ -3,15 +3,15 @@
 {% block content %}
 
 <header class="hero-section">
-    <h3 class="header-text">Welcome to The Car Collection, tester@gmail.com!</h3>
+    <h3 class="header-text">Welcome to The Car Collection, {{ current_user.username }}!</h3>
 </header>
 
 <div class="container">
     <h3>Here are your profile details</h3>
     <ul class="list-group">
-        <li class="list-group-item">Email tester@gmail.com</li>
-        <li class="list-group-item">Token: token when we have one</li>
-        <!--TODO add user email and token Jinja-->
+        <li class="list-group-item">Username: {{current_user.username }}</li>
+        <li class="list-group-item">Email: {{ current_user.email }}</li>
+        <li class="list-group-item">Token: {{ current_user.token }}</li>
     </ul>
 </div>
 
